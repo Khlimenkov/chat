@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:purple_starter/src/core/widget/scope.dart';
-import 'package:purple_starter/src/feature/app/logic/error_tracking_manager.dart';
+import 'package:chat/src/core/widget/scope.dart';
+import 'package:chat/src/feature/app/logic/error_tracking_manager.dart';
 
 class AppLifecycleScope extends Scope {
   static const DelegateAccess<_AppLifecycleScopeDelegate> _delegateOf =

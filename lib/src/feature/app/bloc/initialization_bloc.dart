@@ -2,9 +2,9 @@ import 'dart:async';
 
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pure/pure.dart';
-import 'package:purple_starter/src/core/extension/extensions.dart';
-import 'package:purple_starter/src/core/model/environment_storage.dart';
-import 'package:purple_starter/src/feature/app/logic/error_tracking_manager.dart';
+import 'package:chat/src/core/extension/extensions.dart';
+import 'package:chat/src/core/model/environment_storage.dart';
+import 'package:chat/src/feature/app/logic/error_tracking_manager.dart';
 import 'package:select_annotation/select_annotation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:stream_bloc/stream_bloc.dart';
@@ -71,7 +71,7 @@ class InitializationState with _$InitializationState {
 
   @With<_IndexedInitializationStateMixin>()
   const factory InitializationState.error({
-    required InitializationProgress lastProgress,
+    required InitializationProgress progress,
     required Object error,
     required StackTrace stackTrace,
   }) = InitializationError;
@@ -147,7 +147,7 @@ class InitializationBloc
       );
     } on Object catch (e, s) {
       yield InitializationState.error(
-        lastProgress: _currentProgress,
+        progress: _currentProgress,
         error: e,
         stackTrace: s,
       );

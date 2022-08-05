@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:purple_starter/src/core/model/repository_storage.dart';
-import 'package:purple_starter/src/core/widget/scope.dart';
+import 'package:chat/src/core/model/repository_storage.dart';
+import 'package:chat/src/core/widget/scope.dart';
 
 class RepositoryScope extends Scope {
   static const DelegateAccess<_RepositoryScopeDelegate> _delegateOf =

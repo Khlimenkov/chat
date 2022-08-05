@@ -1,4 +1,4 @@
-import 'package:purple_starter/src/core/database/shared_preferences/shared_preferences_dao.dart';
+import 'package:chat/src/core/database/shared_preferences/shared_preferences_dao.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 part 'preferences_entries.dart';

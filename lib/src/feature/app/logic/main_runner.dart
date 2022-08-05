@@ -4,12 +4,12 @@ import 'dart:async';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:purple_starter/src/core/extension/extensions.dart';
-import 'package:purple_starter/src/core/model/environment_storage.dart';
-import 'package:purple_starter/src/feature/app/bloc/app_bloc_observer.dart';
-import 'package:purple_starter/src/feature/app/bloc/initialization_bloc.dart';
-import 'package:purple_starter/src/feature/app/logic/error_tracking_manager.dart';
-import 'package:purple_starter/src/feature/app/logic/logger.dart';
+import 'package:chat/src/core/extension/extensions.dart';
+import 'package:chat/src/core/model/environment_storage.dart';
+import 'package:chat/src/feature/app/bloc/app_bloc_observer.dart';
+import 'package:chat/src/feature/app/bloc/initialization_bloc.dart';
+import 'package:chat/src/feature/app/logic/error_tracking_manager.dart';
+import 'package:chat/src/feature/app/logic/logger.dart';
 import 'package:sentry_flutter/sentry_flutter.dart';
 import 'package:stream_bloc/stream_bloc.dart';
 import 'package:stream_transform/stream_transform.dart';
@@ -104,7 +104,7 @@ mixin MainRunner {
         },
         error: (state) {
           terminate();
-          hooks?.onFailed(state.lastProgress, state.error, state.stackTrace);
+          hooks?.onFailed(state.progress, state.error, state.stackTrace);
         },
       );
     }

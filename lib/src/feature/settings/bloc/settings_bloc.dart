@@ -1,6 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:purple_starter/src/feature/settings/enum/app_theme.dart';
-import 'package:purple_starter/src/feature/settings/repository/settings_repository.dart';
+import 'package:chat/src/feature/settings/enum/app_theme.dart';
+import 'package:chat/src/feature/settings/repository/settings_repository.dart';
 import 'package:stream_bloc/stream_bloc.dart';
 import 'package:sum/sum.dart';
 

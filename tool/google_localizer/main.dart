@@ -6,9 +6,9 @@ import 'package:pure/pure.dart';
 import 'package:translator/translator.dart';
 
 const languages = [
-  'pt',
-  'es',
-  'it',
+  'uk',
+  'ru',
+  'en',
 ];
 
 void main(List<String> args) => Environment.run(

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:purple_starter/src/core/model/dependencies_storage.dart';
-import 'package:purple_starter/src/core/widget/scope.dart';
+import 'package:chat/src/core/model/dependencies_storage.dart';
+import 'package:chat/src/core/widget/scope.dart';
 
 class DependenciesScope extends Scope {
   static const DelegateAccess<_DependenciesScopeDelegate> _delegateOf =

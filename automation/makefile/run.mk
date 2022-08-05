@@ -16,7 +16,7 @@ logs:
 
 # Development/Trunk
 run-develop:
-	@flutter run --flavor development --dart-define=environment=development
+	@flutter run --flavor development --dart-define=environment=development --dart-define=sentry_dsn=https://0d44e04073114fb19b8a19395e4df9c1@o1348102.ingest.sentry.io/6627231
 
 # Staging/Stage/Model/Pre-production
 run-staging:

@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:pure/pure.dart';
-import 'package:purple_starter/src/core/model/dependencies_storage.dart';
-import 'package:purple_starter/src/core/model/repository_storage.dart';
-import 'package:purple_starter/src/core/widget/dependencies_scope.dart';
-import 'package:purple_starter/src/core/widget/environment_scope.dart';
-import 'package:purple_starter/src/core/widget/repository_scope.dart';
-import 'package:purple_starter/src/feature/app/bloc/initialization_bloc.dart';
-import 'package:purple_starter/src/feature/app/widget/app_configuration.dart';
-import 'package:purple_starter/src/feature/app/widget/app_lifecycle_scope.dart';
-import 'package:purple_starter/src/feature/settings/widget/scope/settings_scope.dart';
+import 'package:chat/src/core/model/dependencies_storage.dart';
+import 'package:chat/src/core/model/repository_storage.dart';
+import 'package:chat/src/core/widget/dependencies_scope.dart';
+import 'package:chat/src/core/widget/environment_scope.dart';
+import 'package:chat/src/core/widget/repository_scope.dart';
+import 'package:chat/src/feature/app/bloc/initialization_bloc.dart';
+import 'package:chat/src/feature/app/widget/app_configuration.dart';
+import 'package:chat/src/feature/app/widget/app_lifecycle_scope.dart';
+import 'package:chat/src/feature/settings/widget/scope/settings_scope.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-class PurpleStarterApp extends StatelessWidget {
+class ChatApp extends StatelessWidget {
   final InitializationData initializationData;
 
-  const PurpleStarterApp({
+  const ChatApp({
     Key? key,
     required this.initializationData,
   }) : super(key: key);
@@ -29,7 +29,7 @@ class PurpleStarterApp extends StatelessWidget {
           errorTrackingDisabler: initializationData.errorTrackingDisabler,
           child: DependenciesScope(
             create: (context) => DependenciesStorage(
-              databaseName: 'purple_starter_database',
+              databaseName: 'chat_database',
               sharedPreferences: _sharedPreferences,
             ),
             child: RepositoryScope(
